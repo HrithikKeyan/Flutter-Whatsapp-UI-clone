@@ -20,6 +20,8 @@ class _CallsScreenState extends State<CallsScreen> {
             leading: new CircleAvatar(
               foregroundColor: Theme.of(context).primaryColor,
               backgroundColor: Colors.grey,
+              backgroundImage: NetworkImage(dummyCalls[i].avatarUrl),
+              radius: 27.0,
             ),
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -42,7 +44,7 @@ class _CallsScreenState extends State<CallsScreen> {
                 children: <Widget>[
                   Icon(
                     Icons.arrow_upward,
-                    color: Theme.of(context).accentColor,
+                    color: new Color(0xff00CC3F),
                   ),
                   Text(
                     dummyCalls[i].date,

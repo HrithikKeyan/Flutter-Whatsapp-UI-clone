@@ -16,11 +16,14 @@ class _StatusScreenState extends State<StatusScreen> {
         children: <Widget>[
           Divider(
             height: 10.0,
+            
           ),
           ListTile(
             leading: CircleAvatar(
               backgroundColor: Colors.grey,
               foregroundColor: Theme.of(context).accentColor,
+              radius: 27.0,
+              backgroundImage:NetworkImage(dummyStatus[i].avatarUrl),
             ),
             title: new Row(
               children: <Widget>[

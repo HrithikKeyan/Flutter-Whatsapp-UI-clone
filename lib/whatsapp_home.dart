@@ -16,24 +16,26 @@ class _WhatsappHomeState extends State<WhatsappHome>
   @override
   void initState() {
     super.initState();
-     _tabController =  new  TabController(vsync: this, initialIndex: 1, length: 4);
-    
+    _tabController = new TabController(vsync: this, initialIndex: 1, length: 4);
   }
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Whatsapp",  style: new TextStyle(fontSize: 18.0),),
+        title: new Text(
+          "Whatsapp",
+          style: new TextStyle(fontSize: 18.0),
+        ),
         elevation: 1.3,
         bottom: TabBar(
           controller: _tabController,
           indicatorColor: Colors.white,
           tabs: <Widget>[
             new Tab(icon: Icon(Icons.camera_alt)),
-            new Tab(text:"CHATS"),
-            new Tab(text:"STATUS"),
-            new Tab(text:"CALLS"),
+            new Tab(text: "CHATS"),
+            new Tab(text: "STATUS"),
+            new Tab(text: "CALLS"),
           ],
         ),
         actions: <Widget>[
@@ -47,18 +49,21 @@ class _WhatsappHomeState extends State<WhatsappHome>
       body: TabBarView(
         controller: _tabController,
         children: <Widget>[
-          new CameraScreen(
-            
-          ),
+          new CameraScreen(),
           new ChatsScreen(),
           new StatusScreen(),
           new CallsScreen(),
         ],
       ),
-       floatingActionButton: FloatingActionButton(onPressed: ()=> print("FAB clicked"),
-      child: Icon(Icons.message, color: Colors.white,),
-      ),
-     
+      floatingActionButton: FloatingActionButton(
+          onPressed: () => print("FAB clicked"),
+          backgroundColor: new Color(0xff00CC3F),
+          child: Icon(
+        
+            Icons.message,
+            color: Colors.white,
+          ),
+          ),
     );
   }
 }
