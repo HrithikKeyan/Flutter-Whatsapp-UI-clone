@@ -11,6 +11,7 @@ class Myapp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: new ThemeData(
         primaryColor: new Color(0xff075E55),
+
         
       ),
       home: new WhatsappHome(),
